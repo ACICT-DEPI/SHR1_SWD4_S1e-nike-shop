@@ -1,4 +1,5 @@
 import 'package:e_commerce/Config/routes/appRoutes.dart';
+import 'package:e_commerce/Core/cache/CacheData.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -69,7 +70,9 @@ class SignInView extends StatelessWidget {
               color: const Color(0xff0D6EFD),
               textColor: Colors.white,
               image: null,
-          function: (){},
+          function: (){
+                debugPrint(CacheData.check.toString());
+          },
           ),
           SizedBox(
             height: 20.h,

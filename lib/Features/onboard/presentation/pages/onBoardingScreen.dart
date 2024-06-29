@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:e_commerce/Core/cache/CacheData.dart';
 import 'package:e_commerce/Features/onboard/presentation/manager/onboard_cubit.dart';
 import 'package:e_commerce/Features/onboard/presentation/widgets/first_onboard_view.dart';
 import 'package:e_commerce/Features/onboard/presentation/widgets/second_onboard_view.dart';
@@ -29,7 +30,7 @@ class OnBoarding extends StatelessWidget {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/onBoard/Onboard.png"),
                         fit: BoxFit.cover)),
@@ -100,7 +101,11 @@ class OnBoarding extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 30, right: 30),
                       child: ElevatedButton(
                         onPressed: () {
-                          OnboardCubit.get(context).changeOnboardViewButton(context);
+                          OnboardCubit.get(context)
+                              .changeOnboardViewButton(context);
+                          if(OnboardCubit.get(context).index==2){
+                            CacheData.setOnBoardingCheckData(key: "OnBoardingCheckData", value: false);
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
@@ -109,7 +114,7 @@ class OnBoarding extends StatelessWidget {
                                 borderRadius:
                                     BorderRadiusDirectional.circular(30))),
                         child: Center(
-                          child: OnboardCubit.get(context).index == 0
+                          child: OnboardCubit.get(context).index == 2
                               ? Text("Get Started",
                                   style: TextStyle(
                                       fontSize: 15.sp,

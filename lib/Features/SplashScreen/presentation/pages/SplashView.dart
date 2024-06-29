@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:e_commerce/Config/routes/appRoutes.dart';
+import 'package:e_commerce/Core/cache/CacheData.dart';
 import 'package:e_commerce/Features/SplashScreen/presentation/widgets/IconAnimation.dart';
 import 'package:flutter/material.dart';
 
@@ -25,12 +26,16 @@ class _SplashViewState extends State<SplashView> {
 
     Timer.periodic(Duration(milliseconds: 100), (Timer timer) {
       setState(() {
-        counter += 0.0095;
+        counter += 0.012;
         value=0;
       });
 
       if (counter >= 1.0) {
+        if(CacheData.check.toString()=="false"){
+          Navigator.pushNamedAndRemoveUntil(context, AppRoutesName.login, (route) => false);
+        }if(CacheData.check==null){
         Navigator.pushNamedAndRemoveUntil(context, AppRoutesName.onBoarding, (route) => false);
+        }
         timer.cancel();
         // Navigate to the next screen after loading is complete
         // For demonstration, let's navigate to HomeScreen
