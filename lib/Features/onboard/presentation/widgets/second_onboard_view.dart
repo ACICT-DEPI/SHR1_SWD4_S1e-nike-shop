@@ -12,10 +12,10 @@ class SecondOnboardView extends StatelessWidget {
           transform: Matrix4.translationValues(0, 0, 0)..scale(value),
           child: Column(
             children: [
-              SizedBox(height: 140.h,),
+              SizedBox(height: 110.h,),
               Row(
                 children: [
-                  Image(image: AssetImage("assets/images/onBoard/onboardTwo.png")),
+                   const Image(image: AssetImage("assets/images/onBoard/onboardTwo.png")),
                   SizedBox(width: 15.w,)
                 ],
               ),
@@ -26,21 +26,21 @@ class SecondOnboardView extends StatelessWidget {
                   Text("Let’s start journey\n       with Nike",
                     style: TextStyle(
                         color: Color(0xffECECEC),
-                        fontSize: 34.sp,
+                        fontSize: 30.sp,
                         fontWeight: FontWeight.bold,
                         fontFamily: "Raleway"
                     ),),
                   SizedBox(width: 20.w,)
                 ],
               ),
-              SizedBox(height: 15.h,),
+              SizedBox(height: 20.h,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Smart, Gorgeous & Fashionable \n         Collection Explor Now",
                     style: TextStyle(
                         color: Color(0xffECECEC).withOpacity(0.9),
-                        fontSize: 16.sp,
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
                         fontFamily: "Poppins"
                     ),),

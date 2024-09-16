@@ -26,7 +26,7 @@ class _SplashViewState extends State<SplashView> {
 
     Timer.periodic(Duration(milliseconds: 100), (Timer timer) {
       setState(() {
-        counter += 0.012;
+        counter += 0.02;
         value=0;
       });
 
