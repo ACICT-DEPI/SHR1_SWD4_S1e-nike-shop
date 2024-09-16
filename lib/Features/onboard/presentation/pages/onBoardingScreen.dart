@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_commerce/Core/cache/CacheData.dart';
+import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
 import 'package:e_commerce/Features/onboard/presentation/manager/onboard_cubit.dart';
 import 'package:e_commerce/Features/onboard/presentation/widgets/first_onboard_view.dart';
 import 'package:e_commerce/Features/onboard/presentation/widgets/second_onboard_view.dart';
@@ -43,7 +44,7 @@ class OnBoarding extends StatelessWidget {
                             return onBoardView[OnboardCubit.get(context).index];
                           },
                           options: CarouselOptions(
-                              height: 680.h,
+                              height: widgetHeight(context: context, height: 680),
                               autoPlay: true,
                               autoPlayInterval: const Duration(seconds: 15),
                               autoPlayAnimationDuration:
@@ -60,7 +61,7 @@ class OnBoarding extends StatelessWidget {
                           height: 50.h,
                         ),
                         Positioned(
-                          top: 650,
+                          top: 660,
                           left: 145,
                           child: SizedBox(
                             height: 4,
@@ -94,11 +95,9 @@ class OnBoarding extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 67.h,
-                    ),
+                    Spacer(),
                     Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 30),
+                      padding: const EdgeInsets.only(left: 30, right: 30,bottom: 10),
                       child: ElevatedButton(
                         onPressed: () {
                           OnboardCubit.get(context)
