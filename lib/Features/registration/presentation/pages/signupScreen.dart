@@ -16,12 +16,12 @@ class SignupView extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Spacer(),
           GestureDetector(
             onTap: () {
               Navigator.pop(context);
             },
             child: Container(
-              margin: REdgeInsets.only(left: 20, top: 40),
               width: 50.w,
               height: 50.h,
               decoration: BoxDecoration(
@@ -37,14 +37,14 @@ class SignupView extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 15.h,
+            height: 8.h,
           ),
           RegistrationText(
               mainText: "Register Account",
               secondaryText: "Fill your details or continue with",
               thirdText: "social media"),
           SizedBox(
-            height: 25.h,
+            height: 15.h,
           ),
           RegistrationTextField(
               labelText: "Name",
@@ -52,7 +52,7 @@ class SignupView extends StatelessWidget {
               obscure: false,
               pass: false),
           SizedBox(
-            height: 15.h,
+            height: 8.h,
           ),
           RegistrationTextField(
             labelText: "Email Address",
@@ -61,7 +61,7 @@ class SignupView extends StatelessWidget {
             pass: false,
           ),
           SizedBox(
-            height: 30.h,
+            height: 20.h,
           ),
           RegistrationTextField(
             labelText: "Password",
@@ -70,7 +70,7 @@ class SignupView extends StatelessWidget {
             pass: true,
           ),
           SizedBox(
-            height: 40.h,
+            height: 30.h,
           ),
           RegistrationButton(
               title: "Sign up",
@@ -80,7 +80,7 @@ class SignupView extends StatelessWidget {
             function: (){},
           ),
           SizedBox(
-            height: 20.h,
+            height: 13.h,
           ),
           RegistrationButton(
               title: "Sign up with Google ",
@@ -89,32 +89,35 @@ class SignupView extends StatelessWidget {
               image: AssetImage("assets/images/registration/google.png"),
             function: (){},
           ),
-          SizedBox(height: 55.h,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Already Have Account?",
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16.sp,
-                    fontFamily: "Raleway",
-                    color: const Color(0xff6A6A6A)),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamedAndRemoveUntil(context, AppRoutesName.login,(route) => false,);
-                },
-                child: Text(
-                  " Log In",
+          Spacer(flex: 2,),
+          Padding(
+            padding:  REdgeInsets.only(bottom: 18.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Already Have Account?",
                   style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16.sp,
-                    fontFamily: "Raleway",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16.sp,
+                      fontFamily: "Raleway",
+                      color: const Color(0xff6A6A6A)),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamedAndRemoveUntil(context, AppRoutesName.login,(route) => false,);
+                  },
+                  child: Text(
+                    " Log In",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16.sp,
+                      fontFamily: "Raleway",
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),

@@ -17,9 +17,8 @@ class SignInView extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
-          SizedBox(
-            height: 100.h,
+          Spacer(
+            flex: 3,
           ),
           RegistrationText(
               mainText: "Hello Again!",
@@ -84,32 +83,37 @@ class SignInView extends StatelessWidget {
               image: AssetImage("assets/images/registration/google.png"),
           function: (){},
           ),
-          SizedBox(height: 130.h,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "New User?",
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16.sp,
-                    fontFamily: "Raleway",
-                    color: const Color(0xff6A6A6A)),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, AppRoutesName.signUp);
-                },
-                child: Text(
-                  " Create Account",
+          Spacer(
+            flex: 5,
+          ),
+          Padding(
+            padding:  REdgeInsets.only(bottom: 35),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "New User?",
                   style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16.sp,
-                    fontFamily: "Raleway",
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16.sp,
+                      fontFamily: "Raleway",
+                      color: const Color(0xff6A6A6A)),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, AppRoutesName.signUp);
+                  },
+                  child: Text(
+                    " Create Account",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16.sp,
+                      fontFamily: "Raleway",
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),
