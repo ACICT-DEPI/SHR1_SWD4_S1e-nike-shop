@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:e_commerce/Core/cache/CacheData.dart';
+import 'package:e_commerce/Core/cache/cache_data.dart';
 import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
 import 'package:e_commerce/Features/onboard/presentation/manager/onboard_cubit.dart';
 import 'package:e_commerce/Features/onboard/presentation/widgets/first_onboard_view.dart';
@@ -31,7 +31,7 @@ class OnBoarding extends StatelessWidget {
               return Container(
                 width: double.infinity,
                 height: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/onBoard/Onboard.png"),
                         fit: BoxFit.cover)),
@@ -95,7 +95,7 @@ class OnBoarding extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Padding(
                       padding: const EdgeInsets.only(left: 30, right: 30,bottom: 10),
                       child: ElevatedButton(

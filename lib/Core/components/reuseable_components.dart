@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget unDefineRoute() {
-  return Scaffold(
+  return const Scaffold(
     body: Center(
       child: Text("Route Name Not Found"),
     ),

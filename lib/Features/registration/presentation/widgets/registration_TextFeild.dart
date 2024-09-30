@@ -44,8 +44,8 @@ class RegistrationTextField extends StatelessWidget {
             obscuringCharacter: "*",
             obscureText: obscure,
             decoration: InputDecoration(
-              suffixIcon: pass?obscure?Icon(Icons.visibility_off)
-                  :Icon(Icons.visibility)
+              suffixIcon: pass?obscure?const Icon(Icons.visibility_off)
+                  :const Icon(Icons.visibility)
                   :null,
               hintText: hintText,
               hintStyle: TextStyle(
@@ -55,7 +55,7 @@ class RegistrationTextField extends StatelessWidget {
               fillColor: Colors.grey.shade300.withOpacity(0.6),
               enabledBorder:
                   const UnderlineInputBorder(borderSide: BorderSide.none),
-              focusedBorder: UnderlineInputBorder(borderSide: BorderSide.none),
+              focusedBorder: const UnderlineInputBorder(borderSide: BorderSide.none),
             ),
           ),
         )
