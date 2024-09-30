@@ -1,6 +1,6 @@
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
-import 'package:e_commerce/Features/home/presentation/pages/cartPage/cart_page.dart';
+import 'package:e_commerce/Features/home/presentation/pages/cart/cartPage/cart_page.dart';
 import 'package:e_commerce/Features/home/presentation/pages/favourtePage/fav_page.dart';
 import 'package:e_commerce/Features/home/presentation/pages/homePage/home_page.dart';
 import 'package:e_commerce/Features/home/presentation/pages/notificationPage/notification_page.dart';

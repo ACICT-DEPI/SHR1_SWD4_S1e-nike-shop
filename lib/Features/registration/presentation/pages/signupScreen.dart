@@ -1,4 +1,4 @@
-import 'package:e_commerce/Config/routes/appRoutes.dart';
+import 'package:e_commerce/Config/routes/app_routes.dart';
 import 'package:e_commerce/Features/registration/presentation/widgets/registration_Button.dart';
 import 'package:e_commerce/Features/registration/presentation/widgets/registration_Text.dart';
 import 'package:e_commerce/Features/registration/presentation/widgets/registration_TextFeild.dart';

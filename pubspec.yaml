@@ -81,6 +81,7 @@ flutter:
     - assets/images/SplashScreen/
     - assets/images/onBoard/
     - assets/images/registration/
+    - assets/images/checkout/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

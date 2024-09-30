@@ -1,7 +1,7 @@
 import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
-import 'package:e_commerce/Features/home/presentation/pages/cartPage/widgets/delete_slidable.dart';
-import 'package:e_commerce/Features/home/presentation/pages/cartPage/widgets/product_counter.dart';
-import 'package:e_commerce/Features/home/presentation/pages/cartPage/widgets/slidable_child.dart';
+import 'package:e_commerce/Features/home/presentation/pages/cart/cartPage/widgets/delete_slidable.dart';
+import 'package:e_commerce/Features/home/presentation/pages/cart/cartPage/widgets/product_counter.dart';
+import 'package:e_commerce/Features/home/presentation/pages/cart/cartPage/widgets/slidable_child.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
