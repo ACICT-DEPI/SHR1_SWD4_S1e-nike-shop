@@ -60,7 +60,6 @@ class ForgetPage extends StatelessWidget {
       ),
     );
   }
-
   changePassMessage(BuildContext context) {
     showDialog(
       context: context,

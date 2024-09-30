@@ -12,7 +12,7 @@ class ThirdOnboardView extends StatelessWidget {
             transform: Matrix4.translationValues(0, 0, 0)..scale(value),
             child: Column(
               children: [
-                SizedBox(height: 130.h,),
+                SizedBox(height: 90.h,),
                 Row(
                   children: [
                     Container(
