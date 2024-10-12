@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 
 class AppRoutesName {
   static const String splashScreen = "splashScreen";
-  static const String homelayout = "/";
+  static const String homelayout = "homelayout";
   static const String onBoarding = "onBoarding";
   static const String login = "login";
   static const String signUp = "signUp";
@@ -35,15 +35,15 @@ class AppRoute {
         );
       case AppRoutesName.login:
         return MaterialPageRoute(
-          builder: (context) => const SignInView(),
+          builder: (context) =>  SignInView(),
         );
       case AppRoutesName.signUp:
         return MaterialPageRoute(
-          builder: (context) => const SignupView(),
+          builder: (context) =>  SignupView(),
         );
       case AppRoutesName.forgetPass:
         return MaterialPageRoute(
-          builder: (context) => const ForgetPage(),
+          builder: (context) =>  ForgetPage(),
         );
       case AppRoutesName.checkout:
         return MaterialPageRoute(

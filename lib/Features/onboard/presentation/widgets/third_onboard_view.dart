@@ -1,3 +1,5 @@
+import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
+import 'package:e_commerce/Core/utils/responsiveUi/responsive_width.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,18 +14,18 @@ class ThirdOnboardView extends StatelessWidget {
             transform: Matrix4.translationValues(0, 0, 0)..scale(value),
             child: Column(
               children: [
-                SizedBox(height: 90.h,),
+                SizedBox(height:widgetHeight(context: context, height: 90)),
                 Row(
                   children: [
                     Container(
                       transform: Matrix4.translationValues(20, 0, 0)..rotateZ(50.36),
                       child: Image(image: AssetImage("assets/images/onBoard/onboardThree.png"),fit: BoxFit.fitWidth,
-                        width: 340.w,height: 320.h,),
+                        width: widgetWidth(context: context, width: 340),height: widgetHeight(context: context, height: 320),),
                     ),
-                    SizedBox(width: 15.w,)
+                    SizedBox(width: widgetWidth(context: context, width: 15),)
                   ],
                 ),
-                SizedBox(height: 30.h,),
+                SizedBox(height:widgetHeight(context: context, height: 30),),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -34,7 +36,7 @@ class ThirdOnboardView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontFamily: "Raleway"
                       ),),
-                    SizedBox(width: 20.w,)
+                    SizedBox(width: widgetWidth(context: context, width: 20),)
                   ],
                 ),
                 Row(
@@ -47,10 +49,10 @@ class ThirdOnboardView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontFamily: "Raleway"
                       ),),
-                    SizedBox(width: 20.w,)
+                    SizedBox(width: widgetWidth(context: context, width: 20))
                   ],
                 ),
-                SizedBox(height: 15.h,),
+                SizedBox(height: widgetHeight(context: context, height: 15),),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -61,7 +63,7 @@ class ThirdOnboardView extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           fontFamily: "Poppins"
                       ),),
-                    SizedBox(width: 20.w,),
+                    SizedBox(width: widgetWidth(context: context, width: 20)),
                   ],
                 ),
                 Row(
@@ -74,7 +76,7 @@ class ThirdOnboardView extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           fontFamily: "Poppins"
                       ),),
-                    SizedBox(width: 20.w,),
+                    SizedBox(width: widgetWidth(context: context, width: 20)),
                   ],
                 ),
               ],

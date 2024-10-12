@@ -45,9 +45,17 @@ dependencies:
   flutter_screenutil: ^5.9.3
   flutter_launcher_icons: ^0.13.1
   curved_labeled_navigation_bar: ^2.0.2
+  animated_search_bar: ^2.7.2
   flutter_slidable: ^3.1.1
-  font_awesome_flutter: ^10.7.0
   dotted_line: ^3.2.2
+  font_awesome_flutter: ^10.7.0
+  flutter_zoom_drawer: ^3.2.0
+  device_preview: ^1.2.0
+  firebase_auth: ^4.16.0
+  cloud_firestore: ^4.17.5
+  google_sign_in: ^6.2.1
+  dio: ^5.7.0
+  dartz: ^0.10.1
 
 flutter_launcher_icons:
   android: true
@@ -81,6 +89,7 @@ flutter:
     - assets/images/SplashScreen/
     - assets/images/onBoard/
     - assets/images/registration/
+    - assets/images/homepage/
     - assets/images/checkout/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -94,14 +103,14 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:
-  # #   - family: Schyler
-  # #     fonts:
-  # #       - asset: fonts/Schyler-Regular.ttf
-  # #       - asset: fonts/Schyler-Italic.ttf
-  # #         style: italic
-  #   - family: Poppins
+  #   - family: Schyler
   #     fonts:
-  #       - asset: fonts/Poppins-Medium.ttf
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
