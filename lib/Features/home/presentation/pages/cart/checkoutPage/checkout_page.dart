@@ -43,63 +43,65 @@ class CheckoutPage extends StatelessWidget {
                       vertical: widgetHeight(context: context, height: 16),
                     ),
                     width: widgetWidth(context: context, width: 347),
-                    height: widgetHeight(context: context, height: 425),
+                    height: widgetHeight(context: context, height: 363),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(
                           widgetWidth(context: context, width: 16)),
                       color: kSecondaryBackgroundColor,
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const TitleText(
-                          text: 'Contact Information',
-                        ),
-                        SizedBox(
-                          height: widgetHeight(context: context, height: 12),
-                        ),
-                        const ContactRow(
-                          text: 'emmanueloyiboke@gmail.com',
-                        ),
-                        SizedBox(
-                          height: widgetHeight(context: context, height: 12),
-                        ),
-                        const ContactRow(text: '+234 806 123 4567'),
-                        SizedBox(
-                          height: widgetHeight(context: context, height: 12),
-                        ),
-                        const TitleText(
-                          text: 'Address',
-                        ),
-                        SizedBox(
-                          height: widgetHeight(context: context, height: 12),
-                        ),
-                        const Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            DescribtionText(
-                              text: '1082 Airport Road, Nigeria',
-                            ),
-                            ExpandedIcon()
-                          ],
-                        ),
-                        SizedBox(
-                          height: widgetHeight(context: context, height: 16),
-                        ),
-                        const MapContainer(),
-                        SizedBox(
-                          height: widgetHeight(context: context, height: 12),
-                        ),
-                        const TitleText(
-                          text: 'Payment Method',
-                        ),
-                        SizedBox(
-                          height: widgetHeight(context: context, height: 12),
-                        ),
-                        const PaymentRow()
-                      ],
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const TitleText(
+                            text: 'Contact Information',
+                          ),
+                          SizedBox(
+                            height: widgetHeight(context: context, height: 12),
+                          ),
+                          const ContactRow(
+                            text: 'emmanueloyiboke@gmail.com',
+                          ),
+                          SizedBox(
+                            height: widgetHeight(context: context, height: 12),
+                          ),
+                          const ContactRow(text: '+234 806 123 4567'),
+                          SizedBox(
+                            height: widgetHeight(context: context, height: 12),
+                          ),
+                          const TitleText(
+                            text: 'Address',
+                          ),
+                          SizedBox(
+                            height: widgetHeight(context: context, height: 12),
+                          ),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              DescribtionText(
+                                text: '1082 Airport Road, Nigeria',
+                              ),
+                              ExpandedIcon()
+                            ],
+                          ),
+                          SizedBox(
+                            height: widgetHeight(context: context, height: 16),
+                          ),
+                          const MapContainer(),
+                          SizedBox(
+                            height: widgetHeight(context: context, height: 12),
+                          ),
+                          const TitleText(
+                            text: 'Payment Method',
+                          ),
+                          SizedBox(
+                            height: widgetHeight(context: context, height: 12),
+                          ),
+                          const PaymentRow()
+                        ],
+                      ),
                     ),
                   ),
                   const CartProducts(),

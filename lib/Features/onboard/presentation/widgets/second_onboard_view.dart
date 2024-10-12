@@ -1,3 +1,5 @@
+import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
+import 'package:e_commerce/Core/utils/responsiveUi/responsive_width.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,14 +14,14 @@ class SecondOnboardView extends StatelessWidget {
           transform: Matrix4.translationValues(0, 0, 0)..scale(value),
           child: Column(
             children: [
-              SizedBox(height: 110.h,),
+              SizedBox(height: widgetHeight(context: context, height: 110)),
               Row(
                 children: [
                    const Image(image: AssetImage("assets/images/onBoard/onboardTwo.png")),
-                  SizedBox(width: 15.w,)
+                  SizedBox(width: widgetWidth(context: context, width: 15))
                 ],
               ),
-              SizedBox(height: 40.h,),
+              SizedBox(height: widgetHeight(context: context, height: 45),),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -30,10 +32,10 @@ class SecondOnboardView extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontFamily: "Raleway"
                     ),),
-                  SizedBox(width: 20.w,)
+                  SizedBox(width: widgetWidth(context: context, width: 20))
                 ],
               ),
-              SizedBox(height: 20.h,),
+              SizedBox(height: widgetHeight(context: context, height: 20)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -44,7 +46,7 @@ class SecondOnboardView extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         fontFamily: "Poppins"
                     ),),
-                  SizedBox(width: 20.w,)
+                  SizedBox(width:widgetWidth(context: context, width: 20))
                 ],
               ),
 
