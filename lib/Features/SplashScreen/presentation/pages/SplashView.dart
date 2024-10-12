@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:e_commerce/Config/routes/appRoutes.dart';
-import 'package:e_commerce/Core/cache/CacheData.dart';
+import 'package:e_commerce/Config/routes/app_routes.dart';
+import 'package:e_commerce/Core/cache/cache_data.dart';
 import 'package:e_commerce/Features/SplashScreen/presentation/widgets/IconAnimation.dart';
 import 'package:flutter/material.dart';
 

@@ -1,3 +1,5 @@
+import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
+import 'package:e_commerce/Core/utils/responsiveUi/responsive_width.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,7 +15,7 @@ class FirstOnboardView extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 80.h,
+                  height:widgetHeight(context: context, height: 80),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -47,8 +49,8 @@ class FirstOnboardView extends StatelessWidget {
                     transform: Matrix4.translationValues(7, 10,0 )..rotateZ(25.14),
                     child:  Image(
                       image: const AssetImage("assets/images/onBoard/leg.png"),fit: BoxFit.fitWidth,
-                      height: 290.h,
-                      width: 370.w,
+                      height: widgetHeight(context: context, height: 280),
+                      width: widgetWidth(context: context, width: 370),
                     )),
 
               ],
