@@ -1,9 +1,12 @@
 import 'package:animated_search_bar/animated_search_bar.dart';
+import 'package:e_commerce/Core/cache/cache_data.dart';
 import 'package:e_commerce/Core/utils/constant/colors.dart';
+import 'package:e_commerce/Core/utils/generalVariable/general_variable.dart';
 import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
 import 'package:e_commerce/Core/utils/responsiveUi/responsive_width.dart';
 import 'package:e_commerce/Features/home/presentation/manager/home_cubit.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -322,21 +325,28 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ],
                                   ),
-                                  Container(
-                                    height: widgetHeight(
-                                        context: context, height: 50),
-                                    width: 42,
-                                    decoration: BoxDecoration(
-                                        color: AppColors.blueColor,
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(24.r),
-                                            bottomRight:
-                                            Radius.circular(24.r))),
-                                    child: Center(
-                                      child: Icon(
-                                        CupertinoIcons.add,
-                                        color: Colors.white,
-                                        size: 23,
+                                  GestureDetector(
+                                    onTap: () async {
+                                        String id=(HomeCubit.get(context).productRepoImp.products[index].id??"");
+                                      GeneralVariable.id.add(id);
+                                       await CacheData.setIdListData(key: "id_list", value: GeneralVariable.id??[]);
+                                    },
+                                    child: Container(
+                                      height: widgetHeight(
+                                          context: context, height: 50),
+                                      width: 42,
+                                      decoration: BoxDecoration(
+                                          color: AppColors.blueColor,
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(24.r),
+                                              bottomRight:
+                                              Radius.circular(24.r))),
+                                      child: Center(
+                                        child: Icon(
+                                          CupertinoIcons.add,
+                                          color: Colors.white,
+                                          size: 23,
+                                        ),
                                       ),
                                     ),
                                   )
