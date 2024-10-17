@@ -1,3 +1,4 @@
+import 'package:e_commerce/Core/utils/generalVariable/general_variable.dart';
 import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
 import 'package:e_commerce/Features/home/presentation/pages/cart/cartPage/widgets/delete_slidable.dart';
 import 'package:e_commerce/Features/home/presentation/pages/cart/cartPage/widgets/product_counter.dart';
@@ -33,12 +34,12 @@ class CartProducts extends StatelessWidget {
                   DeleteSlidable(),
                 ],
               ),
-              child: const SlidableChild(),
+              child:  SlidableChild(index: index,),
             );
           }),
           separatorBuilder: ((context, index) =>
               SizedBox(height: widgetHeight(context: context, height: 14))),
-          itemCount: 8),
+          itemCount: GeneralVariable.cartProduct.length),
     );
   }
 }

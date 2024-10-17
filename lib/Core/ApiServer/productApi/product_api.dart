@@ -14,7 +14,7 @@ class ProductApi{
       },
       options: Options(
         headers: {
-          'Authorization': 'Bearer 5425|UtjXKYc1R0r5ZJHa1dVnRmUdqNgMmq6Z4XWNlNIk',
+          'Authorization': 'Bearer 5542|NwGu1uF3C4VSfYSVNASxLbRCTvcFggmOeQxzSkZx',
         },
       ),
     );
