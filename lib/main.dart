@@ -21,6 +21,6 @@ import 'firebase_options.dart';
     builder: (context) => BlocProvider(create: (context) =>  HomeCubit(ProductRepoImp(ProductApi(Dio()))),
     child: const MyApp(),
     ),
-    enabled: true,
+    enabled: false,
   ) );
 }

@@ -57,6 +57,7 @@ dependencies:
   dio: ^5.7.0
   dartz: ^0.10.1
   add_to_cart_animation: ^2.0.4
+  shimmer: ^3.0.0
 
 flutter_launcher_icons:
   android: true
