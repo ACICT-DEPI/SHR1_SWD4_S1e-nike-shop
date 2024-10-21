@@ -5,9 +5,17 @@ import 'package:e_commerce/Features/home/presentation/pages/favourtePage/widgets
 import 'package:e_commerce/Features/home/presentation/pages/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
-class FavPage extends StatelessWidget {
+class FavPage extends StatefulWidget {
   const FavPage({super.key});
 
+  @override
+  State<FavPage> createState() => _FavPageState();
+}
+
+class _FavPageState extends State<FavPage> {
+  List<ProductModel> favoriteProducts = [];
+  List<String> favoriteProductIds = [];
+  bool _isLoading = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
