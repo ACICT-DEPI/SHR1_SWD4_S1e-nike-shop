@@ -1,26 +1,51 @@
 {
   "project_info": {
-    "project_number": "793444991414",
-    "project_id": "sneaker-app-1",
-    "storage_bucket": "sneaker-app-1.appspot.com"
+    "project_number": "285268153857",
+    "project_id": "nike-shop-2",
+    "storage_bucket": "nike-shop-2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:793444991414:android:44a8931cb42e5279988117",
+        "mobilesdk_app_id": "1:285268153857:android:372660e87ccbb9cf23d200",
         "android_client_info": {
           "package_name": "com.example.e_commerce"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "285268153857-pj3q5r09oo0kgn9lhj193fgij2va0vsg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.e_commerce",
+            "certificate_hash": "34acd5fa7459dc4a1bee3217e41a679e1672e121"
+          }
+        },
+        {
+          "client_id": "285268153857-1jh9ncqot5r8s99fmimspr70ckl22n1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBh72acMf2xOGr9KpBBQvew0mFyr-MjQos"
+          "current_key": "AIzaSyCUN6DnoyFj-wu1x3Ro3OwcUPz4NeTUyvo"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285268153857-1jh9ncqot5r8s99fmimspr70ckl22n1e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "285268153857-ruq1n16j3f88hqdb0c0o4oosueuc4kut.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.eCommerce"
+              }
+            }
+          ]
         }
       }
     }

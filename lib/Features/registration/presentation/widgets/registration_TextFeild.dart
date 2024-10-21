@@ -1,9 +1,13 @@
+import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RegistrationTextField extends StatelessWidget {
   RegistrationTextField(
-      {required this.labelText,
+      {
+        required this.textEditingController,
+        required this.labelText,
       required this.hintText,
       required this.obscure,
       required this.pass,
@@ -13,6 +17,7 @@ class RegistrationTextField extends StatelessWidget {
   String hintText;
   bool obscure;
   bool pass;
+  TextEditingController textEditingController;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,17 +35,18 @@ class RegistrationTextField extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 12.h,
+          height: widgetHeight(context: context, height: 12),
         ),
         Container(
           padding: REdgeInsets.only(left: 15, top: 3, right: 5),
           margin: REdgeInsets.only(left: 20, right: 30),
-          height: 58.h,
+          height: widgetHeight(context: context, height: 58),
           width: double.infinity,
           decoration: BoxDecoration(
               color: Colors.grey.shade300.withOpacity(0.6),
               borderRadius: BorderRadiusDirectional.circular(16.r)),
           child: TextFormField(
+            controller: textEditingController,
             obscuringCharacter: "*",
             obscureText: obscure,
             decoration: InputDecoration(

@@ -1,14 +1,17 @@
 
 import 'package:e_commerce/Core/utils/constants/colors.dart';
+import 'package:e_commerce/Core/utils/generalVariable/general_variable.dart';
 import 'package:e_commerce/Core/utils/responsiveUi/responsive_height.dart';
 import 'package:e_commerce/Core/utils/responsiveUi/responsive_width.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SlidableChild extends StatelessWidget {
-  const SlidableChild({
+   SlidableChild({
+    required this.index,
     super.key,
   });
-
+  int index;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +32,7 @@ class SlidableChild extends StatelessWidget {
                     widgetWidth(context: context, width: 6)),
               ),
               child: Image.network(
-                'https://picsum.photos/200/300',
+                GeneralVariable.cartProduct[index].image?.original??"",
                 width: widgetWidth(context: context, width: 87),
                 height: widgetHeight(context: context, height: 85),
               ),
@@ -43,19 +46,19 @@ class SlidableChild extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
-                'Hoodie',
+               Text(
+                 GeneralVariable.cartProduct[index].name?.substring(0,12)??"",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     fontFamily: "Raleway"),
               ),
               SizedBox(
                 height: widgetHeight(context: context, height: 4),
               ),
-              const Text(
-                '\$200.50',
+               Text(
+                 "${GeneralVariable.cartProduct[index].retailPrice.toString()} \$",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,

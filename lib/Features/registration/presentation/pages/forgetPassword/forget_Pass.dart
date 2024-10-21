@@ -8,7 +8,9 @@ import '../../widgets/registration_TextFeild.dart';
 class ForgetPage extends StatelessWidget {
   static const String routeName = "ForgetPage";
 
-  const ForgetPage({super.key});
+   ForgetPage({super.key});
+
+   TextEditingController email=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +45,7 @@ class ForgetPage extends StatelessWidget {
             height: 20.h,
           ),
           RegistrationTextField(
+            textEditingController: email,
               labelText: "", hintText: "xxxxxxxx", obscure: false, pass: false),
           SizedBox(
             height: 35.h,

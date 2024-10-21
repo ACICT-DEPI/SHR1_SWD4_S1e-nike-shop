@@ -5,6 +5,7 @@ import 'package:e_commerce/Core/cache/cache_data.dart';
 import 'package:e_commerce/Features/SplashScreen/presentation/widgets/IconAnimation.dart';
 import 'package:flutter/material.dart';
 
+import '../../../home/presentation/manager/home_cubit.dart';
 import '../widgets/Animated_text.dart';
 
 class SplashView extends StatefulWidget {
@@ -19,8 +20,8 @@ class _SplashViewState extends State<SplashView> {
   double counter=0;
   @override
   void initState() {
-    super.initState();
     splashScreen();
+    super.initState();
   }
   void splashScreen(){
 
@@ -31,10 +32,16 @@ class _SplashViewState extends State<SplashView> {
       });
 
       if (counter >= 1.0) {
-        if(CacheData.check.toString()=="false"){
-          Navigator.pushNamedAndRemoveUntil(context, AppRoutesName.login, (route) => false);
-        }if(CacheData.check==null){
-        Navigator.pushNamedAndRemoveUntil(context, AppRoutesName.onBoarding, (route) => false);
+        if(HomeCubit.get(context).firebaseuser==null){
+          if(CacheData.getOnBoardingCheckData(key: "OnBoardingCheckData")==null){
+            Navigator.pushNamedAndRemoveUntil(context, AppRoutesName.onBoarding, (route) => false,);
+          }
+          else{
+            Navigator.pushNamedAndRemoveUntil(context, AppRoutesName.login, (route) => false,);
+          }
+        }
+        else{
+          Navigator.pushNamedAndRemoveUntil(context, AppRoutesName.homelayout, (route) => false,);
         }
         timer.cancel();
         // Navigate to the next screen after loading is complete
@@ -52,9 +59,9 @@ class _SplashViewState extends State<SplashView> {
           const SizedBox(height: 30,),
            IconAnimation(value: value,),
           const SizedBox(height: 10,),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               AnimatedTextType(),
             ],
           )
