@@ -23,7 +23,7 @@ class HomeLayout extends StatefulWidget {
 }
 
 class _HomeLayoutState extends State<HomeLayout> {
-  List<Widget>screens=[HomePage(),FavPage(),CartPage(),NotificationPage(),ProfilePage()];
+  List<Widget>screens=[CartPage(),FavPage(),HomePage(),NotificationPage(),ProfilePage()];
 
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
@@ -45,7 +45,7 @@ class _HomeLayoutState extends State<HomeLayout> {
             items: const [
               CurvedNavigationBarItem(
                 child: Icon(
-                  Icons.home_outlined,
+                  Icons.shopping_bag_outlined,
                   size: 25,
                   color: Colors.black54,
                 ),
@@ -59,7 +59,7 @@ class _HomeLayoutState extends State<HomeLayout> {
               ),
 
               CurvedNavigationBarItem(
-                child: Icon(Icons.shopping_bag_outlined,
+                child: Icon(Icons.home_outlined,
                     size: 25, color:Colors.black54),
               ),
               CurvedNavigationBarItem(

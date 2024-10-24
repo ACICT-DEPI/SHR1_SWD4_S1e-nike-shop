@@ -9,7 +9,7 @@ import 'package:e_commerce/Features/registration/presentation/pages/signupScreen
 import 'package:flutter/material.dart';
 
 class AppRoutesName {
-  static const String splashScreen = "splashScreen";
+  static const String splashScreen = "/";
   static const String homelayout = "homelayout";
   static const String onBoarding = "onBoarding";
   static const String login = "login";
